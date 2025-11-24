@@ -42,7 +42,7 @@ function Products({ onAddToCart }) {
           >
             <div className="h-48 bg-gray-200 flex items-center justify-center">
               <img
-                src={`/${product.image}`}     // 🔥 FIXED IMAGE PATH
+                src={`/images/${product.image}`}   // ✅ FINAL FIX
                 alt={product.name}
                 className="w-full h-full object-cover"
               />
