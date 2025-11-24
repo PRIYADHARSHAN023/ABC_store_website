@@ -11,6 +11,7 @@ function Products({ onAddToCart }) {
 
   const fetchProducts = async () => {
     try {
+      // Netlify build ku correct path
       const response = await axios.get('/api/products')
       setProducts(response.data)
       setLoading(false)
@@ -42,7 +43,8 @@ function Products({ onAddToCart }) {
           >
             <div className="h-48 bg-gray-200 flex items-center justify-center">
               <img
-                src={`/images/${product.image}`}   // ✅ FINAL FIX
+                // 🔥 Netlify ku correct public image path
+                src={`/images/${product.image}`}
                 alt={product.name}
                 className="w-full h-full object-cover"
               />
